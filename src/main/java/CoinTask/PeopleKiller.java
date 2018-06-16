@@ -11,21 +11,16 @@ public class PeopleKiller {
    public void remove (int lastMan){
 
 
-       if (lastMan == Ring.people.size()-1){
+       if (lastMan == GameEmulator.people.size()-1){
 
            nextMan = 0;
 
        }else{
            nextMan = lastMan + 1;
        }
+       GameEmulator.people.get(nextMan).setCoins(GameEmulator.people.get(nextMan).getCoins()+GameEmulator.people.get(lastMan).getCoins());
+       GameEmulator.people.remove(lastMan);
 
-
-       People reMan = new People();
-       reMan.setIndex(Ring.people.get(nextMan).getIndex());
-       reMan.setCoins(Ring.people.get(nextMan).getCoins() + Ring.people.get(lastMan).getCoins());
-       Ring.people.set(nextMan, reMan);
-
-       Ring.people.remove(lastMan);
    }
 
 

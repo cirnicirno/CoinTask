@@ -16,10 +16,10 @@ public class ConsoleWorker {
 
         while (true){
             System.out.print("Сколько всего людей? ");
-            if(scanner.isIntNumber()){
+            if(scanner.isIntNumber() && scanner.getNumber() > 1){
                 System.out.print("Сколько людей считать? ");
                 allPeople  = scanner.getNumber();
-                if(scanner.isIntNumber()){
+                if(scanner.isIntNumber() && scanner.getNumber() > 0){
                     turn = scanner.getNumber();
                     break;
                 }
@@ -27,8 +27,8 @@ public class ConsoleWorker {
             }
             System.out.println("Извините, вы ввели неправильное число!");
         }
-        Ring ring = new Ring();
-        ring.count(allPeople, turn);
+        GameEmulator gameEmulator = new GameEmulator();
+        gameEmulator.count(allPeople, turn);
 
     }
 
