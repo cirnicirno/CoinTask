@@ -15,7 +15,7 @@ public class NumberScanner {
 
     public boolean isIntNumber(){
         line = in.nextLine();
-        if(Validator.isInt(line)){
+        if(Validator.isInt(line)){ //валидатор проверяет является ли число int и вовращает false если что-то не так
             number = Integer.parseInt(line);
             return true;
         }

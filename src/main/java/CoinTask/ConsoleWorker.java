@@ -27,6 +27,7 @@ public class ConsoleWorker {
             }
             System.out.println("Извините, вы ввели неправильное число!");
         }
+        //запуск метода решающего непосредственно задачу с передачей ему введеных параметров
         GameEmulator gameEmulator = new GameEmulator();
         gameEmulator.count(allPeople, turn);
 

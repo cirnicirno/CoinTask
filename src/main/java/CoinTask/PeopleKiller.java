@@ -10,7 +10,7 @@ public class PeopleKiller {
 
    public void remove (int lastMan){
 
-
+        //находим слудеющего, кому отдать монетки
        if (lastMan == GameEmulator.people.size()-1){
 
            nextMan = 0;
@@ -18,6 +18,7 @@ public class PeopleKiller {
        }else{
            nextMan = lastMan + 1;
        }
+
        GameEmulator.people.get(nextMan).setCoins(GameEmulator.people.get(nextMan).getCoins()+GameEmulator.people.get(lastMan).getCoins());
        GameEmulator.people.remove(lastMan);
 
