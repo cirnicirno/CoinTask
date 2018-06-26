@@ -21,7 +21,7 @@ public class GameEmulator {
 
         people = new LinkedList<>();
         //Заполняем наш список
-        for (int i = 0; i < peopleAll; i++) {
+        for (int i = 1; i <= peopleAll; i++) {
 
             People man = new People();
             man.setIndex(i);
@@ -32,6 +32,7 @@ public class GameEmulator {
         //начинаем игру
         PeopleKiller killer = new PeopleKiller(); //создаем экземпляры классов методы которых нам понадобятся внутри цикла
         Coins coins = new Coins();
+
         int position = 0; //изначальная позиция с которой начинается отсчет в каждом туре
         int counter = 0; //счетчик шагов
 
@@ -62,7 +63,6 @@ public class GameEmulator {
             }
 
             coins.addTwo(people.size());//отдаем всем кто не получил 1 монетку 2 монетки
-
 
             killer.remove(position); //убираем того, на ком остановился счет и отдаем его монетки следующему человеку
             coins.clear(); //отчищаем set в конце каждого тура

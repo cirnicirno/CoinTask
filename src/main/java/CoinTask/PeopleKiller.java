@@ -18,7 +18,7 @@ public class PeopleKiller {
        }else{
            nextMan = lastMan + 1;
        }
-
+       System.out.println(GameEmulator.people.get(lastMan).getIndex());
        GameEmulator.people.get(nextMan).setCoins(GameEmulator.people.get(nextMan).getCoins()+GameEmulator.people.get(lastMan).getCoins());
        GameEmulator.people.remove(lastMan);
 
